@@ -42,7 +42,7 @@ export default function Home() {
           target="_blank"
           href="https://chatg.pt/weather"
           rel="noreferrer"
-          className="pill"
+          className="{styles.main}"
         >
           Deploy your own to Vercel
         </a>
