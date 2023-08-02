@@ -38,6 +38,14 @@ export default function Home() {
             </a>
           </div>
         </div>
+                          <a
+          target="_blank"
+          href="https://chatg.pt/weather"
+          rel="noreferrer"
+          className="pill"
+        >
+          Deploy your own to Vercel
+        </a>
 
         <div className={styles.center}>
           <Image
