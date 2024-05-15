@@ -1,50 +1,48 @@
 import Head from 'next/head'
+import styles from '@/styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
-        <title>Meu Site</title>
-        <meta name="description" content="Bem-vindo ao meu site" />
+        <title>Chronark</title>
+        <meta name="description" content="Chronark project" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Hero />
-      <Main />
-      <Footer />
+
+      <header className={styles.header}>
+        <h1 className={styles.title}>Chronark</h1>
+      </header>
+
+      <main className={styles.main}>
+        <h2 className={styles.subtitle}>Welcome to Chronark project</h2>
+
+        <div className={styles.grid}>
+          <a href="https://github.com/chronark" className={styles.card}>
+            <h3>Documentation &rarr;</h3>
+            <p>Find in-depth information about Chronark features and API.</p>
+          </a>
+
+          <a href="https://github.com/chronark" className={styles.card}>
+            <h3>Learn &rarr;</h3>
+            <p>Learn about Chronark in an interactive course with quizzes!</p>
+          </a>
+
+          <a href="https://github.com/chronark" className={styles.card}>
+            <h3>Contribute &rarr;</h3>
+            <p>Discover how you can contribute to the Chronark project.</p>
+          </a>
+        </div>
+      </main>
+
+      <footer className={styles.footer}>
+        <a href="https://github.com/chronark" target="_blank" rel="noopener noreferrer">
+          Powered by{' '}
+          <span className={styles.logo}>
+            Chronark
+          </span>
+        </a>
+      </footer>
     </div>
   )
-}
-
-const Header = () => {
-  return (
-    <header style={{backgroundColor: '#f8f9fa', padding: '20px', textAlign: 'center'}}>
-      <h1>Meu Site</h1>
-    </header>
-  );
-}
-
-const Hero = () => {
-  return (
-    <div style={{backgroundImage: 'url(sua-imagem-aqui)', height: '50vh', backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <h2 style={{color: '#fff'}}>Bem-vindo ao meu site</h2>
-    </div>
-  );
-}
-
-const Main = () => {
-  return (
-    <main style={{margin: '20px'}}>
-      <h2>Sobre mim</h2>
-      <p>Este é um exemplo de um layout semelhante ao site que você mencionou.</p>
-    </main>
-  );
-}
-
-const Footer = () => {
-  return (
-    <footer style={{backgroundColor: '#f8f9fa', textAlign: 'center', padding: '10px', position: 'fixed', bottom: '0', width: '100%'}}>
-      <p>Contato: meuemail@exemplo.com</p>
-    </footer>
-  );
 }
